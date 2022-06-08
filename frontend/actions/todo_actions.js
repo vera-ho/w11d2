@@ -10,12 +10,16 @@ export const receiveTodos = (todos) => {
 };
 
 export const receiveTodo = (todo) => {
+    // debugger
+    console.log('receive todo')
     return {
         type: RECEIVE_TODO,
         todo,
     }
 }
 export const removeTodo = (todo) => {
+    // debugger
+    console.log("remove todo")
     return {
         type: REMOVE_TODO,
         todo,
