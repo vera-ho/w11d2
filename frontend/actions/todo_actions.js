@@ -35,9 +35,9 @@ export const fetchToDos = () => (dispatch, getState) => {
 }
 
 export const createToDo = (todo) => (dispatch, getState) => {
-    debugger
+    // debugger
     APIUtil.createToDo(todo).then( todo => {
-        debugger
+        // debugger
         return dispatch(receiveTodo(todo))
     })
 }

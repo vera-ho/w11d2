@@ -40,7 +40,7 @@ class Api::TodosController < ApplicationController
 
     private
     def todo_params
-        debugger
+        # debugger
         params.require(:todo).permit(:title, :body, :done)
     end
 end
