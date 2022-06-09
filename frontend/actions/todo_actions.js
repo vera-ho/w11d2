@@ -12,6 +12,7 @@ export const receiveTodos = (todos) => {
 };
 
 export const receiveTodo = (todo) => {
+    // debugger
     console.log('receive todo')
     return {
         type: RECEIVE_TODO,
@@ -33,3 +34,10 @@ export const fetchToDos = () => (dispatch, getState) => {
     })
 }
 
+export const createToDo = (todo) => (dispatch, getState) => {
+    debugger
+    APIUtil.createToDo(todo).then( todo => {
+        debugger
+        return dispatch(receiveTodo(todo))
+    })
+}

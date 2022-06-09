@@ -1,5 +1,5 @@
 import {connect} from "react-redux"
-import { receiveTodo } from "../../actions/todo_actions"
+import { receiveTodo, createToDo } from "../../actions/todo_actions"
 import todoForm from "./todo_form"
 
 const mSTP = state => {
@@ -8,9 +8,13 @@ const mSTP = state => {
 }
 const mDTP = dispatch => {
     return {
-        receiveTodo: (todo) => {
-            return dispatch(receiveTodo(todo))
+        createToDo: todo => {
+            // debugger
+            return dispatch(createToDo(todo))
         }
+        // receiveTodo: (todo) => {
+        //     return dispatch(receiveTodo(todo))
+        // }
     }
 }
 export default connect(mSTP, mDTP)(todoForm)

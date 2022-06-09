@@ -1,4 +1,4 @@
-require 'byebug'
+# require 'byebug'
 
 class Api::TodosController < ApplicationController
     def index
@@ -11,6 +11,7 @@ class Api::TodosController < ApplicationController
     end
       
     def create
+        # debugger
         @todo = Todo.new(todo_params)
         if @todo.save
             render json: @todo
@@ -39,6 +40,7 @@ class Api::TodosController < ApplicationController
 
     private
     def todo_params
-        params.require(:todo).require(:title, :body, :done)
+        debugger
+        params.require(:todo).permit(:title, :body, :done)
     end
 end

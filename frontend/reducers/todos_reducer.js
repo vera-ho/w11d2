@@ -31,12 +31,14 @@ const todosReducer = (state = initialState, action) => {
             return nextStateTodos;
             // nextState[action.todos] = action.todos;
         case RECEIVE_TODO:
+            debugger
             nextState[action.todo.id] = action.todo;
             return nextState;
         case REMOVE_TODO:
             delete nextState[action.todo.id]
             return nextState
         default:
+            debugger
             return state;
     }
   };
