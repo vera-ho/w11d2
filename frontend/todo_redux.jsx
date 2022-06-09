@@ -5,6 +5,7 @@ import Root from "../frontend/components/root"
 import ReactDOM from "react-dom"
 import React from "react"
 import allTodos from "./reducers/selectors"
+import { fetchToDos } from "./util/todo_api_util";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -19,5 +20,5 @@ document.addEventListener("DOMContentLoaded", () => {
     const rootElement = document.getElementById("root")
     ReactDOM.render(<Root store={store}/>, rootElement);
     window.allTodos = allTodos(store.getState());
-    
+    window.fetchToDos = fetchToDos;
 })

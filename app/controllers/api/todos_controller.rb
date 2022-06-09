@@ -1,3 +1,5 @@
+require 'byebug'
+
 class Api::TodosController < ApplicationController
     def index
         @todos = Todo.all
