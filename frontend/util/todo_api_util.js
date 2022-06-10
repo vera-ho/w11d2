@@ -6,10 +6,9 @@ export const fetchToDos = () => (
 )
 
 export const createTodo = (todo) => {
-    // debugger
     return $.ajax({
         method: "POST",
         url: "/api/todos",
-        data: todo
+        data: { todo: todo }
     })
 }

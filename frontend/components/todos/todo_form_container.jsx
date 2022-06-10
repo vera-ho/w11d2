@@ -9,7 +9,6 @@ const mSTP = state => {
 const mDTP = dispatch => {
     return {
         createTodo: todo => {
-            // debugger
             return dispatch(createTodo(todo))
         }
         // receiveTodo: (todo) => {

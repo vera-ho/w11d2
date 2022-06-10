@@ -26,7 +26,6 @@ export const removeTodo = (todo) => {
 // thunk action creators
 
 export const fetchToDos = () => (dispatch, getState) => {
-    console.log("thunk fetch")
     return APIUtil.fetchToDos().then( todos => {
         return dispatch(receiveTodos(todos))
     })

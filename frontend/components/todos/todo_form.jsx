@@ -15,16 +15,16 @@ class TodoForm extends React.Component {
     }
 
     updateTitle(e) {
-        this.setState({title:e.target.value})
+        this.setState({ title: e.target.value })
     }
+    
     updateBody(e) {
-        this.setState({body:e.target.value})
+        this.setState({ body: e.target.value })
     }
+
     handleSubmit(e) {
         e.preventDefault();
-        debugger
-        let todo = Object.assign({}, this.state)
-        this.props.createTodo({ todo }).then(
+        this.props.createTodo(this.state).then(
             () => this.setState({
                 title: "",
                 body: "",
@@ -32,6 +32,7 @@ class TodoForm extends React.Component {
             })
         )
     }
+
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
@@ -55,4 +56,5 @@ class TodoForm extends React.Component {
         )
     }
 }
+
 export default TodoForm;
