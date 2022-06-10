@@ -5,7 +5,7 @@ export const fetchToDos = () => (
     })
 )
 
-export const createToDo = (todo) => {
+export const createTodo = (todo) => {
     // debugger
     return $.ajax({
         method: "POST",

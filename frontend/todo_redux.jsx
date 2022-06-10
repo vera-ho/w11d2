@@ -10,15 +10,7 @@ import React from "react"
 
 document.addEventListener("DOMContentLoaded", () => {
     const store = configureStore();
-    window.store = store;
-    // window.receiveTodo = receiveTodo;
-    // window.receiveTodos = receiveTodos;
-    // window.removeTodo = removeTodo
-    // window.receiveStep = receiveStep
-    // window.receiveSteps = receiveSteps
-    // window.removeStep = removeStep
     const rootElement = document.getElementById("root")
+    window.store = store;
     ReactDOM.render(<Root store={store}/>, rootElement);
-    // window.allTodos = allTodos(store.getState());
-    window.fetchToDos = fetchToDos;
 })

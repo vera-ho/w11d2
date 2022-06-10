@@ -24,7 +24,7 @@ class TodoForm extends React.Component {
         e.preventDefault();
         debugger
         let todo = Object.assign({}, this.state)
-        this.props.createToDo({ todo }).then(
+        this.props.createTodo({ todo }).then(
             () => this.setState({
                 title: "",
                 body: "",
