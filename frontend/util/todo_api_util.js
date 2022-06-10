@@ -10,5 +10,6 @@ export const createTodo = (todo) => {
         method: "POST",
         url: "/api/todos",
         data: { todo: todo }
+        // data: todo
     })
 }
